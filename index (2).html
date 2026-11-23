@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <title>Mening portfoliom</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;800&family=Manrope:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="glow"></div>
+    <header>
+        <nav><b>PORTFOLIO</b>
+        </nav>
+        <div class="hero">
+            <div class="avatar"><button type="button" class="ring" id="avatar" aria-label="Profil rasmini tanlash"><span
+                        class="photo"></span></button><button type="button" class="del" id="avDel" hidden>Rasmni
+                    oʻchirish</button><input type="file" id="avFile" accept="image/*" hidden></div>
+            <h1 id="name" aria-label="Ismingiz"></h1>
+            <p class="role" id="role" contenteditable="true" spellcheck="false"><span>Dasturchi va dizayner.</span>
+                Gʻoyalarni ishlaydigan mahsulotga aylantiraman.</p>
+            <div class="cta"><a class="btn" href="#loyihalar">Loyihalarni koʻrish</a><button class="btn ghost"
+                    id="addTop">+ Loyiha qoʻshish</button></div>
+        </div>
+    </header>
+    <main>
+        <section id="loyihalar">
+            <div class="head">
+                <h2>Loyihalarim</h2><button class="btn ghost" id="add">+ Yangi loyiha</button>
+            </div>
+            <div class="grid" id="grid"></div>
+        </section>
+        <section id="haqida">
+            <h2 style="margin-bottom:24px">Men haqimda</h2>
+            <p class="about" id="about" contenteditable="true" spellcheck="false">Salom, men Asrorbek. Web dasturlash
+                bilan shugʻullanaman: HTML, CSS, PHP va Django yordamida saytlar va web ilovalar yarataman, maʼlumotlar
+                bazasi bilan MySQL orqali ishlayman, Java ham bilaman. Kodlarimni GitHub’da saqlayman, ishlashda VS
+                Code’dan foydalanaman. Har kuni yangi narsa oʻrganishga va gʻoyalarimni ishlaydigan loyihaga
+                aylantirishga harakat qilaman.</p>
+            <div class="skills" id="skills" contenteditable="true" spellcheck="false">
+                <span>JavaScript</span><span>Python</span><span>UI dizayn</span><span>Telegram bot</span></div>
+            <h3 class="sub">Ishlay oladigan dasturlarim</h3>
+            <div class="tech" id="tech" contenteditable="true" spellcheck="false">
+                <span>HTML</span><span>CSS</span><span>Java</span><span>MySQL</span><span>GitHub</span><span>PHP</span><span>Django</span><span>VS
+                    Code</span></div>
+        </section>
+    </main>
+    <footer id="aloqa">
+        <div>Bogʻlanish: <a href="@Sobirov_05_02" id="mail" contenteditable="true"
+                spellcheck="false">siz@example.com</a></div>
+    </footer>
+
+    <div class="modal" id="modal" role="dialog" aria-modal="true" aria-label="Yangi loyiha">
+        <form id="form">
+            <h2 style="font-size:1.5rem">Yangi loyiha</h2>
+            <label for="t">Nomi</label><input id="t" maxlength="60" required>
+            <label for="d">Tavsif</label><textarea id="d" maxlength="300" required></textarea>
+            <label for="g">Texnologiyalar (vergul bilan)</label><input id="g" placeholder="React, Node.js, Figma">
+            <label for="l">Havola (ixtiyoriy)</label><input id="l" type="url" placeholder="https://...">
+            <label for="f">Rasm (ixtiyoriy)</label><input id="f" type="file" accept="image/*">
+            <div class="err" id="err" role="alert"></div>
+            <div class="acts"><button type="button" class="btn ghost" id="cancel">Bekor qilish</button><button
+                    type="submit" class="btn">Saqlash</button></div>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
